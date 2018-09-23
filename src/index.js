@@ -17,22 +17,22 @@ class Sorter {
   }
 
   toArray() {
-    let sortarray = [];
-    for(let index=0; index<this.arr.length;index++)
+    let array = [];
+    for(let index=0; index<this.array.length;index++)
     {
-      sortarray.push(this.array[index]);
+      array.push(this.array[index]);
     }
-    return sortarray;
+    return array;
   }
 
   sort(indices) {
-    let sortarray = [];
+    let array = [];
     for(var index=0; index<indices.length;index++){
-      sortarray.push(this.array[indices[index]]);
+      array.push(this.array[indices[index]]);
     }
-    sortarray.sort(this.comparator);
+    array.sort(this.comparator);
     for(var index=0; index<indices.length;index++){
-      this.arr.splice(indices[index],1,sortarray[index]);
+      this.array.splice(indices[index],1,array[index]);
     }
     
   }
